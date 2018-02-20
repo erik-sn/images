@@ -1,0 +1,1 @@
+web: python manage.py migrate && gunicorn config.wsgi -k gthread --threads=5 -w 5 -t 60

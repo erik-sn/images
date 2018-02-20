@@ -1,0 +1,31 @@
+.user_list__container {
+  color: $secondary;
+}
+
+.user_item__container {
+  font-size: 24px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+
+#user_detail__container > a {
+  color: #999;
+}
+
+#user_form__container > form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3px 0px;
+  }
+
+  button { 
+    width: 250px;
+  }
+}

@@ -1,0 +1,44 @@
+;; other
+*.pyc
+
+;; virtual environments
+ven
+venv
+env
+
+;; IDE configurations
+.idea/
+.vscode
+
+;; code coverage reports
+.coverage
+cover
+coverage
+htmlcov
+
+
+;; database
+db.sqlite3
+
+;; nginx
+nginx/logs
+
+;; image files
+*.png
+*.jpg
+*.jpeg
+*.svg
+api/__pycache__/
+api/migrations/__pycache__/
+config/__pycache__/
+images/
+js/src/img/
+
+;; production variables
+.env
+
+;; static files
+/static/download_images
+
+;; pickles
+/search/pickles/*

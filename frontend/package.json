@@ -1,0 +1,116 @@
+{
+  "name": "react-template",
+  "version": "0.0.4",
+  "description": "T3 React Template",
+  "main": "index.tsx",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts*'",
+    "test": "jest --no-cache",
+    "coverage": "jest --color --coverage",
+    "dev": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --port 3000 --config webpack.dev.js",
+    "build": "./node_modules/.bin/webpack --config webpack.prod.js",
+    "compile": "tsc --outdir dist -t es5 -m commonjs",
+    "server": "node ./dist/src/server.js"
+  },
+  "author": "Erik Niehaus",
+  "license": "MIT",
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/__tests__/setup.ts"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/fileMock.ts",
+      "\\.(css|scss|less)$": "<rootDir>/__tests__/styleMock.ts",
+      "@(.*)$": "<rootDir>/src$1"
+    },
+    "testPathIgnorePatterns": [
+      "setup.ts",
+      "fileMock.ts",
+      "styleMock.ts",
+      "dist"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "_moduleAliases": {
+    "@": "dist/src"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.1",
+    "@types/compression": "0.0.35",
+    "@types/enzyme": "^3.1.7",
+    "@types/express": "^4.11.0",
+    "@types/express-handlebars": "0.0.30",
+    "@types/jest": "^22.0.1",
+    "@types/jsdom": "^11.0.4",
+    "@types/morgan": "^1.7.35",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/redux-promise": "^0.5.28",
+    "@types/sinon": "^4.1.3",
+    "autoprefixer": "^7.2.4",
+    "awesome-typescript-loader": "^3.4.1",
+    "babel-loader": "^7.1.2",
+    "chai": "^4.1.2",
+    "css-loader": "^0.28.8",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "jsdom": "^11.5.1",
+    "json-loader": "^0.5.7",
+    "module-alias": "^2.0.3",
+    "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.0.10",
+    "prop-types": "^15.6.0",
+    "react-hot-loader": "^4.0.0-beta.15",
+    "react-test-renderer": "^16.2.0",
+    "sass-loader": "^6.0.6",
+    "sinon": "^3.3.0",
+    "style-loader": "^0.18.2",
+    "ts-jest": "^22.0.1",
+    "ts-loader": "^3.2.0",
+    "tslint": "^5.9.1",
+    "tslint-react": "^3.4.0",
+    "typescript": "^2.6.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "core-js": "^2.5.1",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.0",
+    "raf": "^3.3.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
+  }
+}
