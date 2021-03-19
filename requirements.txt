@@ -16,7 +16,7 @@ django-debug-toolbar==1.9.1
 django-extensions==1.9.8
 django-jet==1.0.6
 django-rest-framework==0.1.0
-djangorestframework==3.7.2
+djangorestframework==3.11.2
 djangorestframework-camel-case==0.2.0
 djangorestframework-jwt==1.11.0
 fake-useragent==0.1.10
